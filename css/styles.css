@@ -327,11 +327,15 @@ color: var(--accent-color);
     text-decoration: none;
     text-align:center ;
     }
+
+    
   
+
 /* Section */
 .section {
   padding-top: 0;
   padding-bottom: 94px;
+  z-index: 1;
 }
 
 .visually-hidden {
@@ -407,6 +411,7 @@ text-align: center;
   .flex-work {
     display: flex;
     flex-wrap: wrap;
+    
   }
 
   .work-element {
@@ -591,8 +596,9 @@ text-align: center;
     border-radius: 4px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   }
-
+  
   /* ----MODAL WONDOW----- */
+
   .backdrop {
     position: fixed;
     /* position: absolute; */
@@ -600,10 +606,11 @@ text-align: center;
     height: 100%;
     left: 0px;
     top: 0px;
-
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background: rgba(0, 0, 0, 0.2);
     }
-    .backdrop.is-hidden {
+
+    .backdrop.is-hidden  {
       opacity: 0;
       pointer-events: none;
     }
@@ -616,9 +623,9 @@ text-align: center;
       width: 528px;
       height: 581px;
 
-      transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); ;
       
-      background: #FFFFFF;
+      background-color: #FFFFFF;
       box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
        0px 1px 1px rgba(0, 0, 0, 0.14), 
        0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -627,6 +634,7 @@ text-align: center;
     
     .close-button {
       position: absolute;
+      cursor: pointer;
       top: 8px;
       right: 8px;
       width: 30px;
@@ -638,7 +646,6 @@ text-align: center;
       border-radius: 50%;
       background-color: inherit;
     }
-  
   /*--- Footer--- */
 
   .page-footer {
